@@ -4,6 +4,10 @@ used by application management user.
 
 ## 1. How to setup develop environment.
 
+- Setup mysql database.
+- Create laravel project.
+  Edit .env file.
+
 ## 2. How to commit
 
 Branch operations are performed using below.
@@ -21,13 +25,15 @@ Branch operations are performed using below.
 
 ## 3. How to deploy
 
-Create terraform container to run commands.
+- Create AWS IAM user for this application.
 
-```
-$ docker-compose up terraform -d
-$ docker-compose exec terraform bash
-$ docker-compose --profile terraform down
-```
+- Create terraform container to run commands.
+
+  ```
+  $ docker-compose up terraform -d
+  $ docker-compose exec terraform bash
+  $ docker-compose --profile terraform down
+  ```
 
 ### 3-1. Create AWS environment.
 

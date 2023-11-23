@@ -13,6 +13,7 @@ services:
     container_name: php
     build: ./php
     environment:
+      - APP_NAME=${APP_NAME}
       - DB_HOST=${DB_HOST}
       - DB_PORT=${DB_PORT}
       - DB_DATABASE=${DB_DATABASE}
@@ -38,6 +39,7 @@ services:
     container_name: terraform
     build: ./terraform
     environment:
+      - TF_VAR_app_name=${APP_NAME}
       - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
       - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
     volumes:
